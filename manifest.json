@@ -1,0 +1,26 @@
+{
+  "name": "Carvana++",
+  "version": "1.0",
+  "description": "Mark cars as not interesting, and search full description text",
+  "manifest_version": 2,
+  "background": {
+     "persistent": false,
+     "scripts": [
+         "background.js"
+     ]
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.carvana.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ]
+}
